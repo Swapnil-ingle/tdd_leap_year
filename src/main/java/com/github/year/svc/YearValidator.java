@@ -19,6 +19,10 @@ public class YearValidator {
 	}
 
 	public boolean isLeapYear(Long year) {
+		if (year % 4000 == 0) {
+			return false;
+		}
+
 		if (year % 400 == 0) {
 			return true;
 		}
