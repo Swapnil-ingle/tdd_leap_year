@@ -26,4 +26,11 @@ public class YearValidatorTest {
 		assertTrue(YearValidator.getInstance().isLeapYear(2012L));
 		assertTrue(YearValidator.getInstance().isLeapYear(2016L));
 	}
+
+	@Test
+	public void testAllYearsNotDivisibleBy4AreNotLeap() {
+		assertFalse(YearValidator.getInstance().isLeapYear(2017L));
+		assertFalse(YearValidator.getInstance().isLeapYear(2018L));
+		assertFalse(YearValidator.getInstance().isLeapYear(2019L));
+	}
 }
